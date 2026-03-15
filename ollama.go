@@ -18,11 +18,11 @@ type Client struct {
 
 // NewClient creates a new Ollama client
 // baseURL should be like "http://localhost:11434" or "http://192.168.0.1:11434"
-func NewClient(baseURL string) *Client {
+func NewClient(baseURL string, timeOut int64) *Client {
 	return &Client{
 		baseURL: baseURL,
 		client: &http.Client{
-			Timeout: 600 * time.Second,
+			Timeout: time.Duration(timeOut) * time.Second,
 		},
 	}
 }
