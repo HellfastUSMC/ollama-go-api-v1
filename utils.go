@@ -60,3 +60,11 @@ func StrictOptions() *Options {
 		RepeatPenalty: 1.1,
 	}
 }
+func Qwen34bOptions() *Options {
+	return &Options{
+		Temperature:   0.0,
+		TopP:          0.2,
+		TopK:          15,
+		RepeatPenalty: 1.1,
+	}
+}
