@@ -37,7 +37,8 @@ func (c *Client) Chat(ctx context.Context, req *ChatRequest) (*ChatResponse, err
 	httpReq, err := http.NewRequestWithContext(
 		ctx,
 		"POST",
-		c.baseURL+"/api/chat",
+		//c.baseURL+"/api/chat",
+		c.baseURL,
 		bytes.NewBuffer(jsonData),
 	)
 	if err != nil {
